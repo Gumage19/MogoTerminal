@@ -1,0 +1,47 @@
+[
+    {
+      "Product": "A",
+      "Prices": [
+        {
+          "Quantity": 1,
+          "Price": 1.25
+        },
+        {
+          "Quantity": 3,
+          "Price": 3.00
+        }
+      ]
+    },
+    {
+      "Product": "B",
+      "Prices": [
+        {
+          "Quantity": 1,
+          "Price": 4.25
+        }
+      ]
+    },
+    {
+      "Product": "C",
+      "Prices": [
+        {
+          "Quantity": 1,
+          "Price": 1.00
+        },
+        {
+          "Quantity": 6,
+          "Price": 5.00
+        }
+      ]
+    },
+    {
+      "Product": "D",
+      "Prices": [
+        {
+          "Quantity": 1,
+          "Price": 0.75
+        }
+      ]
+    }
+  ]
+
