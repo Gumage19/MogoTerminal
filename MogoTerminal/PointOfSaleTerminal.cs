@@ -112,7 +112,7 @@ namespace MogoTerminal
         }
 
         /* 
-         * Description: Returns the prices for a product.
+         * Description: Returns the prices for a product, this is sorted with the highest quantity break first.
          * Parameters: string
          * Returns: List of Prices
          */

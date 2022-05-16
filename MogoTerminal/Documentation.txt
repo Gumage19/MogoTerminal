@@ -1,0 +1,12 @@
+﻿Trevor Watson – Design decisions – Mogo Terminal
+
+Data Storage - The data is supplied to the LoadPrices class as a serialize JSON string. 
+
+Scanning of Products – When a product is scanned it is checked to se if it is valid, if it is not valid an exception is thrown.
+When adding products to the lists it is checked if the item is already in the cart and if it is the quantity is updated on the existing list item.
+
+Price Calculation- The prices are calculated allowing for multiple price breaks. This allows for pricing flexibility.
+
+Clear Cart - The ability to clear all items from the cart has been added, this helps for testing and is a good feature to have.
+
+Unit Testing – Unit testing has been loaded with the test scenarios provided, tests to check the exceptions have also been added. 

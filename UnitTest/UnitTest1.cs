@@ -1,5 +1,6 @@
 using MogoTerminal;
 using NUnit.Framework;
+using System;
 using System.IO;
 using System.Reflection;
 
@@ -36,10 +37,32 @@ namespace UnitTest
                 terminal.ScanProduct(s);
             }
 
-            //Assert
+            // Assert
             Assert.AreEqual(expectedValue, terminal.CalculateTotal());
             terminal.ClearCart();
             Assert.AreEqual(0, terminal.CalculateTotal());
+        }
+
+        [TestCase("Scanned product E is not valid", "E")]
+        [TestCase("Value cannot be null.", "")]
+        public void Test_ScanException(string expectedValue, string scanData)
+        {
+            // Arrange
+            var terminal = new PointOfSaleTerminal();
+            terminal.LoadPrices(jsonFile);
+
+            // Act
+            string retunedExeption = "";
+            try
+            {
+                terminal.ScanProduct(scanData);
+            }
+            catch(Exception e)
+            {
+                retunedExeption = e.Message;
+            }
+            // Assert
+            Assert.AreEqual(expectedValue, retunedExeption);
         }
 
     }
